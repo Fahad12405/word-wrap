@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #3f51b5, #009688);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.container {
+    width: 450px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+}
+
+.container h2 {
+    font-size: 28px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #009688;
+    color: #009688;
+}
+
+.container .content {
+    margin-top: 30px;
+}
+
+.content .word {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.details p {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.details p b {
+    font-weight: 500;
+}
+
+.content input {
+    width: 100%;
+    height: 60px;
+    outline: none;
+    padding: 0 20px;
+    border-radius: 10px;
+    border: 2px solid #009688;
+    font-size: 18px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.content input:focus {
+    border-color: #3f51b5;
+}
+
+.content .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    border: none;
+    outline: none;
+    padding: 15px 0;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    flex: 1;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.buttons .refresh-word {
+    background: #f44336;
+    color: #fff;
+}
+
+.buttons .check-word {
+    background: #ffc107;
+    color: #000;
+}
+
+.buttons button:hover {
+    transform: translateY(-3px);
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content .word {
+    animation: slideIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container .content {
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Additional CSS Styles */
+.content .info {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.content .info a {
+    color: #009688;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.content .info a:hover {
+    text-decoration: underline;
+}
+
+.content .loading {
+    text-align: center;
+    font-size: 18px;
+    color: #009688;
+    margin-top: 20px;
+}
+
+.content .loading:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #009688;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
